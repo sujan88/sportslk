@@ -1,0 +1,145 @@
+@charset "utf-8";
+/* CSS Document */
+.main_view {
+	
+	float: left;
+	position: relative;
+	-moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -khtml-border-radius: 20px;
+    border-radius: 20px;
+}
+/*--Window/Masking Styles--*/
+.window {
+	
+	height:300px;	width:560px;
+	overflow: hidden; /*--Hides anything outside of the set width/height--*/
+	position: relative;
+	-moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -khtml-border-radius: 20px;
+    border-radius: 20px;
+}
+.image_reel {
+	
+	-moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -khtml-border-radius: 20px;
+    border-radius: 20px;
+	position: absolute;
+	top: 0; left: 0;
+}
+.image_reel img {float: left;}
+
+/*--Paging Styles--*/
+.paging {
+	position: absolute;
+	bottom: -10px; right: -20px;
+	width: 178px; height:47px;
+	z-index: 100; /*--Assures the paging stays on the top layer--*/
+	text-align: center;
+	line-height: 40px;
+	display: none; /*--Hidden by default, will be later shown with jQuery--*/
+}
+.paging a {
+	padding: 5px;
+	text-decoration: none;
+	color: #fff;
+}
+.paging a.active {
+	font-weight: bold;
+	background: #920000;
+	border: 1px solid #610000;
+	-moz-border-radius: 3px;
+	-khtml-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+.paging a:hover {font-weight: bold;}
+
+
+
+
+
+
+
+/* sponsor page tab*/
+
+/* tab*/
+
+
+ul.tabs {
+	margin: 0;
+	padding: 0;
+	float: left;
+	list-style: none;
+	height: 32px; /*--Set height of tabs--*/
+	border-bottom: 1px solid #999;
+	border-left: 1px solid #999;
+	width: 100%;
+	
+}
+ul.tabs li {
+	float: left;
+	margin: 0;
+	padding: 0;
+	height: 31px; /*--Subtract 1px from the height of the unordered list--*/
+	line-height: 31px; /*--Vertically aligns the text within the tab--*/
+	border: 1px solid #999;
+	border-left: none;
+	margin-bottom: -1px; /*--Pull the list item down 1px--*/
+	overflow: hidden;
+	position: relative;
+	background:#000
+	
+}
+ul.tabs li a {
+	text-decoration: none;
+	color:#CCC;
+	display: block;
+	font-size: 1.2em;
+	padding: 0 20px;
+	border: 1px solid #fff; /*--Gives the bevel look with a 1px white border inside the list item--*/
+	outline: none;
+}
+ul.tabs li a:hover {
+	background:#fff;
+	color:#000;
+	
+	
+}
+html ul.tabs li.active, html ul.tabs li.active a:hover  { /*--Makes sure that the active tab does not listen to the hover properties--*/
+	background: #fff;
+	border-bottom: 1px solid #fff; /*--Makes the active tab look like it's connected with its content--*/
+}
+
+
+/*tab contain*/
+.tab_container {
+	border: 1px solid #999;
+	border-top: none;
+	overflow: hidden;
+	clear: both;
+	float: left; width: 100%;
+	background: #fff;
+border-bottom-left-radius: 20px;	
+-moz-border-radius-bottomleft: 20px;
+ -webkit-border-radius-bottomleft: 20px;
+    -khtml-border-radius-bottomleft: 20px;
+}
+.tab_content {
+	
+	padding-right:20px;
+	font-size: 14px;
+	height:260px;
+	margin-bottom:20px;
+	
+}
+
+.tab_content_naf {
+	padding-left:20px;
+	padding-right:20px;
+	font-size: 14px;
+	height:auto;
+	margin-bottom:20px;
+	
+}

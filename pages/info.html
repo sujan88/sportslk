@@ -1,0 +1,157 @@
+    
+              <script type="text/javascript" src="js/jquery.min.js"></script>
+             <link rel="stylesheet" href="css/Css.css" type="text/css"  title="no title"  />
+             <script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/thickbox.js"></script>
+<link rel="stylesheet" href="css/thickbox.css" type="text/css" media="screen" />
+             
+             
+             
+     <div style="width:530px; ">  
+     
+     
+           
+    <script>   $(document).ready(function() {
+
+	//When page loads...
+	$(".tab_content").hide(); //Hide all content
+	$("ul.tabs li:first").addClass("active").show(); //Activate first tab
+	$(".tab_content:first").show(); //Show first tab content
+
+	//On Click Event
+	$("ul.tabs li").click(function() {
+
+		$("ul.tabs li").removeClass("active"); //Remove any "active" class
+		$(this).addClass("active"); //Add "active" class to selected tab
+		$(".tab_content").hide(); //Hide all tab content
+
+		var activeTab = $(this).find("a").attr("href"); //Find the href attribute value to identify the active tab + content
+		$(activeTab).fadeIn(); //Fade in the active ID content
+		return false;
+	});
+
+});</script>
+<ul class="tabs">
+    <li><a href="#tab1">National Results</a></li>
+    <li><a href="#tab2">Top Rank</a></li>
+    <li><a href="#tab3">Gallery</a></li>
+    <li><a href="#tab4">About us</a></li>
+    
+</ul>
+
+<div class="tab_container">
+    <div id="tab1" class="tab_content">
+
+        	
+           <center> Sri lanka National Games results</center><br/>
+        <table border = "0px" width =530 height = 100% cellpadding = "0"  style = "font-family:Calibri; ">
+      
+         <tr style="background:#666;  font-weight:bold">
+        <td width="30"></td><td style="color:#FFF" >Out Door</td><td>In Door</td>
+        </tr>
+         <tr >
+        <td width="10"></td><td><a href="pages/athletic.html?keepThis=true&TB_iframe=true&height=500&width=800" title="Sri Lanka Nationals Results- Athletic men" class="thickbox">Athletic men</a></td><td><a href="pages/weightlifting.html?keepThis=true&TB_iframe=true&height=500&width=800" title="Sri Lanka Nationals Results- Weightlifting"; class="thickbox">Weightlifting</a></td>
+        </tr> 
+        <tr style="background:#CCC">
+        <td width="10"></td><td><a href="pages/athletic_women.html?keepThis=true&TB_iframe=true&height=100%&width=100%" title="Sri Lanka Nationals Results- Athletic women" class="thickbox">Athletic women</a></td><td><a href="pages/validation_form.html?keepThis=true&TB_iframe=true&height=100%&width=100%" title="add a caption to title attribute / or leave blank" class="thickbox">Bodybuilding</a></td>
+        </tr>
+         <tr >
+       <td width="10"></td> <td><a href="pages/validation_form.html?keepThis=true&TB_iframe=true&height=100%&width=100%" title="add a caption to title attribute / or leave blank" class="thickbox">Athletic</a></td><td><a href="pages/validation_form.html?keepThis=true&TB_iframe=true&height=100%&width=100%" title="add a caption to title attribute / or leave blank" class="thickbox">Boxing</a></td>
+        </tr>
+        <tr style="background:#CCC">
+        <td width="10"></td><td><a href="pages/validation_form.html?keepThis=true&TB_iframe=true&height=100%&width=100%" title="add a caption to title attribute / or leave blank" class="thickbox">Chess</a></td><td><a href="pages/validation_form.html?keepThis=true&TB_iframe=true&height=100%&width=100%" title="add a caption to title attribute / or leave blank" class="thickbox">Wresling</a></td>
+        </tr>
+         <tr >
+        <td width="10"></td><td><a href="pages/validation_form.html?keepThis=true&TB_iframe=true&height=100%&width=100%" title="Weightlifting nationals Results" class="thickbox">Rugby</a></td><td><a href="pages/weightlifting.html?keepThis=true&TB_iframe=true&height=500&width=800" title="add a caption to title attribute / or leave blank" class="thickbox">Gymnastic</a></td>
+        </tr>
+        <tr style="background:#CCC">
+        <td width="10"></td><td><a href="pages/validation_form.html?keepThis=true&TB_iframe=true&height=100%&width=100%" title="add a caption to title attribute / or leave blank" class="thickbox">Athletic</a></td><td><a href="pages/validation_form.html?keepThis=true&TB_iframe=true&height=100%&width=100%" title="add a caption to title attribute / or leave blank" class="thickbox">Weightlifting</a></td>
+        </tr>
+         <tr >
+        <td width="10"></td><td><a href="pages/validation_form.html?keepThis=true&TB_iframe=true&height=100%&width=100%" title="add a caption to title attribute / or leave blank" class="thickbox">Athletic</a></td><td><a href="pages/validation_form.html?keepThis=true&TB_iframe=true&height=100%&width=100%" title="add a caption to title attribute / or leave blank" class="thickbox">Athletic</a></td>
+        </tr>
+        
+        </table>
+   
+     
+
+        <!--Content-->
+    </div>
+    <div id="tab2" class="tab_content">
+       
+      
+      <dl>
+<dt>Weightlifting</dt>
+<dd>1 Chinthana Geethal Vidanage</dd>
+<dd>2 K.M perise</dd>
+<dd>3 Ransilu Jayathilake</dd>
+<dd>4 Sujan Duminda</dd>
+<dt>Boxing</dt>
+<dd>1 Manju wanninayake</dd>
+<dd>2 Anuruddha Rathnayake</dd>
+</dl> 
+       
+       <!--Content-->
+    </div>
+    <div id="tab3" class="tab_content">
+<table border = "0px" width =532 height = 47% cellpadding = "0"  style = "font-family:Calibri; ">
+      
+         
+         <tr >
+        <td width="8"></td><td width="100"> <a href=tabletennis.html><img src="images/gallery/1.jpg" height="40px" width="41px"><right><h4>Table Tennis</h4></right></a></td>
+        <td width="8"></td><td width="100"> <a href=badminton.html><img src="images/gallery/3.jpg" height="40px" width="41px"><right><h4>Batminton</h4></right></a></td>
+         <td width="8"></td><td width="100"> <a href=squash.html><img src="images/gallery/4.jpg" height="40px" width="41px"><right><h4>Squash</h4></right></a></td>
+        
+        </tr> 
+        <tr>
+        <td width="8"></td><td> <a href=boxing.html><img src="images/gallery/2.jpg" height="40px" width="41px"><right><h4>Boxing</h4></right></a></td>
+        <td width="8"></td><td> <a href=bodybuilding.html><img src="images/gallery/4.jpg" height="40px" width="41px"><right><h4><strong>Bodybuilding</strong></h4></right></a></td>
+         <td width="8"></td><td> <a href=weightlifting.html><img src="images/gallery/12.jpg" height="40px" width="41px"><right><h4>Wieghtlifting</h4></right></a></td>
+        
+        </tr>
+         <tr >
+       <td width="8"></td><td> <a href=football.html><img src="images/gallery/7.jpg" height="40px" width="41px"><right><h4>Football</h4></right></a></td>
+        <td width="8"></td><td> <a href=basketball.html><img src="images/gallery/8.jpg" height="40px" width="41px"><right><h4>Basketball</h4></right></a></td>
+        <td width="8"></td><td> <a href=volleyball.html><img src="images/gallery/9.jpg" height="40px" width="41px"><right><h4>Volleyball</h4></right></a></td>
+       
+        </tr>
+       
+        
+        </table>
+
+	
+	<script>
+	$(function() {
+		$( "#progressbar" ).progressbar({
+			value: 37
+		});
+	});
+	</script>
+
+
+
+<div class="demo">
+
+<div id="progressbar"></div>
+
+</div><!-- End demo -->
+
+
+
+<div class="demo-description">
+<p>Default determinate progress bar.</p>
+</div><!-- End demo-description -->
+        <!--Content-->
+    </div>
+     <div id="tab4" class="tab_content" style= " padding-right:20px; padding-left:10px;">
+  
+       <h3>About SportsLK
+                </h3>
+            <div style="font: 12px/19px verdana, arial, sans-serif; ">	
+            
+            Cricket is the leading sport, though there are lots of sports in Sri Lanka. But there are communities in Sri Lanka who are interested in other sports as well. Since they are not given the proper motivation, those sports are not popular and they are restricted to a limited crowd. And there are young talented school sportsmen who are eligible for the national teams but hesitating due to their poor economical conditions. Those kinds of young people should be encouraged, so that it helps to uplift the sportsmanship in Sri Lanka. So, we the ultrasoft team is going to give an IT solution for the prevailing problem in the field of sports in Sri Lanka. We are going to build up an online service that all kinds of sports lovers can join together and have a discussion about sports. </div>
+       <!--Content-->
+    </div>
+    
+   
+</div></div>

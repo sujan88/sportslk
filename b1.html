@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>SportsLK</title>
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<link rel="stylesheet" href="css/Css.css" type="text/css"  title="no title"  />
+        <link rel="stylesheet" href="css/thickbox.css" type="text/css" media="screen" />
+        
+        <link rel="stylesheet" href="css/general.css" type="text/css">
+		<link href="css/template.css" rel="stylesheet" type="text/css">
+		<link href="css/style1.css" rel="stylesheet" type="text/css">
+		<link href="css/style2.css" rel="stylesheet" type="text/css">
+		<link href="css/rokmoomenu.css" rel="stylesheet" type="text/css">
+			<script type="text/javascript"src="js/jquery.min.js"></script>
+            <script type="text/javascript"src="js/newsscroll.js"></script>
+            <script type="text/javascript"src="js/index_3.js"></script>
+
+
+   </head>
+
+<body style="font-family:Calibri" onload="MM_preloadImages('images/btn3.png')">
+
+		<div id="header">
+    	           <div id="header_content">
+                        <table border = "0px" width = "960" height = "90" cellpadding = "0" style = "font-family:Calibri;color:#FFF">
+                        <tr>
+                            <td width="472" valign="top">
+                           
+                            </td>
+                                
+                            <td width="328" style="padding-left:30px;">
+                             <form name="search" action="" method="post">
+                                Search <input type="text" name="search" style="width:200px"  />
+                                <img border = "0" src="./images/header/search.png" width = "20px" height = "20px" align="top"/>
+                              </form>
+                          </td>
+                                
+                             <td width="50" style="padding:0px;" >
+                           
+                              <?php   if(!session_id()){ ?>      <a href="./signin.php" style = "text-decoration:none; color:#FFF" onmouseover="this.style.color= '#000';" onmouseout="this.style.color= '#fff'">Sign in</a><?php }else {?><?php }?>
+                          </td>
+                              <td width="11" >|</td>
+                              <td width="87"  style="padding:0px;" >
+                                    <a href="signin.php?sign=out" style = "text-decoration:none; color:#FFF" onmouseover="this.style.color= '#000';" onmouseout="this.style.color= '#fff'">Sign Out</a>
+                              </td>
+                         </tr>
+                     </table>
+</div>   
+                     
+                     
+                      <!-- main menu--> 
+                    
+                       <div id="horiz-menu" class="moomenu">
+				<ul class="menutop">
+                <li id="current" class="active item1"><center><a href="index.php"><span>Home</span></a></center></li>
+                <li class="item38"><a href="sports_person.php"><span>sports persons</span></a></li>
+                <li class="item74"><a href="b1.html"><span>Rules of Games</span></a></li>
+                
+                <li class="parent item28"><a href="http://www.sportslink.com.sg/home/outlets.html" class="topdaddy"><span>Outlets</span></a>
+                <ul><li class="item25"><a href="http://www.sportslink.com.sg/home/outlets/exchangepolicy.html"><span>ExchangePolicy</span></a></li></ul></li>
+                <li class="parent item73"><a href="http://www.sportslink.com.sg/home/services.html" class="topdaddy"><span>Services</span></a>
+                <ul><li class="item37"><a href="http://www.sportslink.com.sg/home/services/racket-restring.html"><span>Racket Restring</span></a></li>				<li class="item42"><a href="http://www.sportslink.com.sg/home/services/jersey-printing.html"><span>Jersey Printing</span></a></li>							
+                <li class="item44"><a href="http://www.sportslink.com.sg/home/services/sports-equipment.html"><span>Sports Equipment</span></a></li>				<li class="item45"><a href="http://www.sportslink.com.sg/home/services/gift-vouchers.html"><span>Gift-Vouchers</span></a></li>
+                <li class="item46"><a href="http://www.sportslink.com.sg/home/services/team-order.html"><span>Team</span></a></li></ul></li>
+                
+                <li class="parent item26"><a href="http://www.sportslink.com.sg/home/aboutus.html" class="topdaddy"><span>About Us</span></a>
+                <ul><li class="item23"><a href="http://www.sportslink.com.sg/home/aboutus/corporation-info.html"><span>Corporation Info</span></a></li>			<li class="item2"><a href="http://www.sportslink.com.sg/home/aboutus/who-are-we.html"><span>Who-Are-We</span></a></li>
+                <li class="item67"><a href="http://www.sportslink.com.sg/home/aboutus/our-main-activities.html"><span>MainActivities</span></a></li>			<li class="item68"><a href="http://www.sportslink.com.sg/home/aboutus/our-products.html"><span>OurProducts</span></a></li>
+                <li class="item69"><a href="http://www.sportslink.com.sg/home/aboutus/our-customers.html"><span>OurCustomers</span></a></li>
+                <li class="item70"><a href="http://www.sportslink.com.sg/home/aboutus/concepts-a-beliefs.html"><span>Concepts Beliefs</span></a></li>		<li class="item71"><a href="http://www.sportslink.com.sg/home/aboutus/strategic-directions.html"><span>StrategicDirections</span></a></li></ul></li>
+                
+                <li class="parent item62"><a href="http://www.sportslink.com.sg/home/sportslink-card.html" class="topdaddy"><span>Sportslink Card</span></a>		<ul><li class="item63"><a href="http://www.sportslink.com.sg/home/sportslink-card/faqs.html"><span>FAQs</span></a></li>
+                <li class="item64"><a href="http://www.sportslink.com.sg/home/sportslink-card/terms-a-conditions.html"><span>Term-Conditions</span></a></li><li class="item8"><a href="http://www.sportslink.com.sg/card/" onclick="window.open(this.href,&#39;targetWindow&#39;,&#39;toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,&#39;);return false;"><span>Members-Login</span></a></li></ul></li></ul>		</div>   
+            </div>  
+   
+ <div class="leftmenu">
+        <UL>
+     <LI><A href="../SportsLK website2/b1.html"  >Batminton</A><A href="../SportsLK website2/w1.html"  >Weightlifting</A></LI>
+      <LI><A href="../SportsLK website2/q1.html"  >Squash</A></LI>
+     
+     
+        </UL>
+
+ </div>
+ <div id="hotinfo">
+ <div id="pict"><img src="../SportsLK website3/bm/2.jpg" width="160" height="200"></div>
+
+ <h4 style="color:#600">BATMINTON RULES</h4>
+ <h4 style="color:#C00">- Toss</h4>
+ <p>The rules of badminton states that a toss shall be conducted before a game  starts. If you win, you can choose between serving first or to start play at  either end of the court. Your opponent can then exercise the remaining choice.</p>
+<h4 style="color:#C00">- Scoring system </h4>
+<strong>The rules of badminton states that a badminton match shall consist of the best  of 3 games. In doubles and men's singles, the first side to score 15 points  wins the game. In women's singles, the first side to score 11 points wins the  game.<br />
+    If the score becomes 14-all (10-all in women's singles), the side which first  scored 14 (10) shall exercise the choice to continue the game to 15 (11) points  or to 'set' the game to 17 (13) points.<br />
+    The side winning a game serves first in the next game.&nbsp;Only the serving  side can add a point to its score.<br />
+    The rules of badminton states that you have to change ends with your opponent  after finishing the first game. If a third game was to be played, you shall  change ends when the leading score reaches 6 in a game of 11 points or 8 in a  game of 15 points.<br />
+   </strong><br />
+    <h4 style="color:#C00">- Rules of Badminton - Singles </h4>
+    </p>
+ <h4 style="color:#F00"> Serving and receiving courts </h4>
+   
+   <strong>You shall serve from, and receive in, the&nbsp;right service court&nbsp;when  you or your opponent has scored an&nbsp;even number&nbsp;of points in  that game.<br />
+   You shall serve from, and receive in, the&nbsp;left service court&nbsp;when  you or your opponent has scored an&nbsp;odd number&nbsp;of points in  that game.<br />
+   You and your opponent will hit the shuttle alternately until a&nbsp;'fault'&nbsp;is  made or the shuttle ceases to be in play.<br />
+ </strong></h4>
+<h4 style="color:#F00">Scoring and serving</H4>
+<strong>You score a point and serve again from the alternate service court when your  opponent makes a 'fault' or the shuttle ceases to be in play because it touches  the surface of your opponent's side of court.<br />
+    No points will be scored when you make a 'fault' or the shuttles ceases to be  in play because it touches the surface of your side of court. Theserving right&nbsp;will  then be transferred to your opponent.<br />
+   </strong><br />
+   <h4 style="color:#F00">Rules of Badminton - Doubles</h4>
+<strong>At the start of the game, and each time a side gains the right to serve, the  service shall be delivered from the right service court. Only your opponent  standing diagonally opposite of you shall return the service.<br />
+   Should your opponent's partner touched or hit the shuttle, it shall be a  'fault' and your side scores a point.</strong><br />
+    <br />
+   <h4 style="color:#F00">Order of play and position on court </h4>
+    <strong>After the service is returned, either you or your partner may hit the shuttle  from any position on your side of the net. Then either player from the opposing  side may do the same, and so on, until the shuttle ceases to be in play.<br />
+    <br />
+   </strong><h4 style="color:#F00">Scoring and serving </h4>
+   <strong>If you are serving or receiving first at the start of any game, you shall serve  or receive in the&nbsp;right service court&nbsp;when your side or your  opponent's side scored an&nbsp;even number&nbsp;of points.<br />
+    You shall serve from or receive in the&nbsp;left service court&nbsp;when  your side or your opponent's side has scored an&nbsp;odd number&nbsp;of  points. The reverse pattern shall apply to your partner.<br />
+    In any game, the right to serve passes consecutively from the initial server to  the initial receiver, then to that initial's receiver's partner, then to the  opponent who is due to serve from the right service court, then to that  player's partner, and so on.<br />
+   You shall not serve out of turn, receive out of turn, or receive two  consecutive services in the same game, except as provided in service court  errors and 'lets'.</strong><br />
+    <br />
+   <h4 style="color:#F00">Service court errors</h4>
+<strong>A service court error has been made when a player has served out of turn, has  served from the wrong service or standing on the wrong service court while  being prepared to receive the service and it has been delivered.<br />
+    If a service court error is discovered after the next service had been  delivered, the error shall not be corrected. If a service court error is  discovered before the next service is delivered, the following rules apply.<br />
+    If both sides committed an error, it shall be a 'let'. If one side committed  the error and won the rally, it shall be a 'let'. If one side committed the  error and lost the rally, the error shall not be corrected.<br />
+    If there is a 'let' because of a service court error, the rally is replayed  with the error corrected. If a service court error is not to be corrected, play  in that game shall proceed without changing the player's new service courts.<br />
+    <br />
+   </strong><h4 style="color:#F00">Faults </h4><strong>The rules of badminton consider the following as&nbsp;faults:<br />
+    01. If the shuttle lands outside the boundaries of the court, passes through or  under the net, fail to pass the net, touches the ceiling or side walls, touches  the person or dress of a player or touches any other object or person.<br />
+    02. If the initial point of contact with the shuttle is not on the striker's side  of the net. (The striker may, however, follow the shuttle over the net with the  racket in the course of a stroke.)<br />
+    03. If a player touches the net or its supports with racket, person or dress,  invades an opponent's court over the net with racket or person except as  permitted.<br />
+    04. If a player invades an opponent's court under the net with racket or person  such that an opponent is obstructed or distracted or obstructs an opponent,  that is prevents an opponent from making a legal stroke where the shuttle is  followed over the net.<br />
+    05. If a player deliberately distracts an opponent by any action such as shouting  or making gestures.<br />
+    06. If the shuttle is caught and held on the racket and then slung during the  execution of a stroke.<br />
+    07. If the shuttle is hit twice in succession by the same player with two  strokes.<br />
+    08. If the shuttle is hit by a player and the player's partner successively or  touches a player's racket and continues towards the back of that player's  court.<br />
+    09. If a player is guilty of flagrant, repeated or persistent offences under Law  of Continuous Play, Misconduct, Penalties.<br />
+    10. If, on service, the shuttle is caught on the net and remains suspended on  top, or, on service, after passing over the net is caught in the net.<br />
+   </strong></h4>
+<h4 style="color:#F00">Shuttle not in play </h4><strong><br />
+  A shuttle is not in play when it strikes the net and remains attached there or  suspended on top.<br />
+  A shuttle is not in play when it strikes the net or post and starts to fall  towards the surface of the court on the striker's side of the net.<br />
+  A shuttle is not in play when it hits the surface of the court or a 'fault' or  'let' has occurred.<br />
+  <br />
+  </strong><h4 style="color:#0F0">I am sure now that you have a better understanding of the Rules of  Badminton, you will enjoy your game more!<br />
+</h4>
+</div> 
+</body>
+
+</html>

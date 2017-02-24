@@ -1,0 +1,106 @@
+/* @override http://localhost:8888/sportslink15/templates/sportslink/css/style1.css */
+
+/* style1 */
+
+
+/* horiz menu */
+
+div#horiz-menu a,
+div#horiz-menu li.active li a {
+	color:#CF0;
+}
+
+div#horiz-menu li:hover,
+div#horiz-menu li.sfHover,
+div#horiz-menu li.active:hover,
+div#horiz-menu li.active.sfHover {
+	/*background: url(../images/style1/menu2-r.png) 100% 0 no-repeat;*/
+}
+
+div#horiz-menu li:hover a,
+div#horiz-menu li.sfHover a,
+div#horiz-menu li.active:hover a,
+div#horiz-menu li.active.sfHover a {
+	background: url(../images/style1/menu2-l.png) 0 0 no-repeat;
+	color: #fff;
+}
+
+#horiz-menu li.active {
+	background: url(../images/style1/menu-r.png) 100% 0 no-repeat;
+}
+
+#horiz-menu li.active a {
+	background: url(../images/style1/menu-l.png) 0 0 no-repeat;
+	color: #000000;
+}
+
+#horiz-menu li.active li.active,
+#horiz-menu li.active li.active a {
+	background: none;
+}
+
+/* moomenu */
+
+#horiz-menu li li {
+	background:#600;
+	border-right:1px solid #000000;
+	border-bottom: 1px solid #000000;
+}
+
+#horiz-menu li li:hover,
+#horiz-menu li li.sfHover,
+#horiz-menu li:hover li:hover,
+#horiz-menu li.sfHover li.sfHover,
+#horiz-menu li.active li.active {
+	background: #AC4848;
+}
+
+#horiz-menu li:hover li a.daddy:link,
+#horiz-menu li.sfHover li a.daddy:link,
+#horiz-menu li:hover li a.daddy:visited,
+#horiz-menu li.sfHover li a.daddy:visited  {
+	background: url(../images/style1/bullet-sucker.png) 100% 50% no-repeat;
+}
+
+#horiz-menu li:hover,
+#horiz-menu li.sfHover {
+background: url(../images/style1/menu2-r.png) 100% 0 no-repeat;
+}
+
+#horiz-menu li:hover a
+#horiz-menu li.sfHover a {
+background: url(../images/style1/menu2-l.png) 0 0 no-repeat;	
+}
+
+/* top menu */
+
+div#top ul.menu a,
+div#top a.mainlevel {
+	color: #fff;
+}
+
+/* mainlevel menu */
+
+a.mainlevel {
+	background: url(../images/style1/bullet-7.png) 0 2px no-repeat;
+}
+
+li.active a,
+li.active li.active a,
+li.active li.active li.active a,
+li.active li.active li.active li.active a {
+    font-weight: bold;
+    color: red;
+	
+}
+
+li.active li a,
+li.active li.active li a,
+li.active li.active li.active li a {
+	font-weight: normal;
+	color: red;
+}
+
+
+
+

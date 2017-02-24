@@ -1,0 +1,1091 @@
+-- phpMyAdmin SQL Dump
+-- version 3.2.0.1
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: Apr 21, 2012 at 07:20 AM
+-- Server version: 5.1.36
+-- PHP Version: 5.3.0
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+--
+-- Database: `sportslk`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `baddate`
+--
+
+CREATE TABLE IF NOT EXISTS `baddate` (
+  `sdate` date NOT NULL,
+  `tittle` varchar(255) NOT NULL,
+  `edate` date NOT NULL,
+  `TO_ID` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `baddate`
+--
+
+INSERT INTO `baddate` (`sdate`, `tittle`, `edate`, `TO_ID`) VALUES
+('2011-06-29', 'dkmflfdsak', '2011-06-29', 0),
+('2011-07-18', 'nationals', '2011-07-18', 0),
+('2011-07-05', 'jjskl', '2011-07-05', 0),
+('2011-07-19', 'province', '2011-07-19', 0),
+('2011-06-30', 'bbbb', '2011-06-30', 0),
+('2011-06-28', 'nnnn', '2011-06-28', 0),
+('2011-06-27', 'rrrrr', '2011-06-27', 0),
+('2011-07-01', 'ccccc', '2011-07-01', 0),
+('2011-00-07', 'national s', '2011-00-07', 0),
+('2011-07-06', ',mjkc x', '2011-07-08', 0),
+('2011-07-04', 'ddsds', '2011-07-04', 1),
+('2011-07-11', 'ccccccccccccc', '2011-07-11', 0),
+('2011-07-12', 'dog', '2011-07-12', 0),
+('2011-07-14', 'nationals', '2011-07-14', 0),
+('2011-07-20', 'ddfvd', '2011-07-22', 0),
+('2011-07-13', 'national', '2011-07-13', 0),
+('2011-06-26', 'zzzz', '2011-06-26', 0),
+('2011-07-03', 'meet', '2011-07-03', 0),
+('2011-07-25', 'fffffff', '2011-07-27', 0),
+('2011-07-15', 'nnnnnnnnnnn', '2011-07-15', 0),
+('2011-07-02', 'nationas ', '2011-07-02', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `btmnt_rank`
+--
+
+CREATE TABLE IF NOT EXISTS `btmnt_rank` (
+  `Rank` int(11) NOT NULL,
+  `Name` varchar(100) NOT NULL,
+  `Id` int(11) NOT NULL,
+  PRIMARY KEY (`Rank`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `btmnt_rank`
+--
+
+INSERT INTO `btmnt_rank` (`Rank`, `Name`, `Id`) VALUES
+(1, 'Sujan Duminda', 22),
+(2, 'Chinthana Gethal Vidanage', 34),
+(3, 'Suranga Rukshan', 343),
+(4, 'Nishantha Silava', 42),
+(5, 'Kushan Silva', 321),
+(6, 'Roshan Gonarathne', 320),
+(7, 'Lakshitha Perera', 43),
+(8, 'Rukshan Dangallle', 41),
+(9, 'Yasas Rathnayake', 65),
+(10, 'Malin silva', 301),
+(11, 'Samith Perise', 211),
+(12, 'Roshana Thennakoon', 52),
+(13, 'Jhon silva', 344),
+(14, 'Indika Zoisa', 21),
+(15, 'Samith Ranga', 98),
+(16, 'Brain Shone', 69);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `date`
+--
+
+CREATE TABLE IF NOT EXISTS `date` (
+  `sdate` date NOT NULL,
+  `tittle` varchar(255) NOT NULL,
+  `edate` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `date`
+--
+
+INSERT INTO `date` (`sdate`, `tittle`, `edate`) VALUES
+('2011-06-26', ';l;elw;', '2011-06-26');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `entry_forms`
+--
+
+CREATE TABLE IF NOT EXISTS `entry_forms` (
+  `index` int(11) NOT NULL AUTO_INCREMENT,
+  `TOURNAMENT` varchar(30) NOT NULL,
+  `SPORT` int(5) NOT NULL,
+  `TO_ID` int(11) NOT NULL,
+  PRIMARY KEY (`index`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=20 ;
+
+--
+-- Dumping data for table `entry_forms`
+--
+
+INSERT INTO `entry_forms` (`index`, `TOURNAMENT`, `SPORT`, `TO_ID`) VALUES
+(17, 'sponsorship22.docx', 1, 1),
+(16, 'nationalsquash 2011.docx', 2, 1),
+(15, 'national2011.docx', 1, 1),
+(12, 'IN 2200.docx', 4, 1),
+(13, 'IN_2200_Software_Engineering_M', 4, 1),
+(14, 'sponsorship.docx', 4, 1),
+(18, 'doc1.docx', 1, 1),
+(19, 'doc1.docx', 1, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ozekimessagein`
+--
+
+CREATE TABLE IF NOT EXISTS `ozekimessagein` (
+  `sender` varchar(255) NOT NULL,
+  `receiver` varchar(255) NOT NULL,
+  ` msg` varchar(255) NOT NULL,
+  `senttime` varchar(255) NOT NULL,
+  `receivedtime` varchar(255) NOT NULL,
+  `msgtype` varchar(255) NOT NULL,
+  `operator` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `ozekimessagein`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ozekimessageout`
+--
+
+CREATE TABLE IF NOT EXISTS `ozekimessageout` (
+  `id` varchar(255) NOT NULL,
+  `sender` varchar(255) NOT NULL,
+  `receiver` varchar(255) NOT NULL,
+  `msg` varchar(255) NOT NULL,
+  `msgtype` varchar(255) NOT NULL,
+  `operator` varchar(255) NOT NULL,
+  `status` varchar(25) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `ozekimessageout`
+--
+
+INSERT INTO `ozekimessageout` (`id`, `sender`, `receiver`, `msg`, `msgtype`, `operator`, `status`) VALUES
+('', 'Sportslk', '0719482612', 'wade hari', 'text', 'sportslk', 'delivered'),
+('', 'Sportslk', '0713558230', '', 'text', 'sportslk', 'send'),
+('', 'Sportslk', '0714500653', '', 'text', 'sportslk', 'send'),
+('', 'Sportslk', '0713558230', '', 'text', 'sportslk', 'send'),
+('', 'Sportslk', '0714500653', '', 'text', 'sportslk', 'send'),
+('', 'Sportslk', '0713558230', '', 'text', 'sportslk', 'send'),
+('', 'Sportslk', '0714500653', '', 'text', 'sportslk', 'send'),
+('', 'Sportslk', '0718232376', '', 'text', 'sportslk', 'send');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `request`
+--
+
+CREATE TABLE IF NOT EXISTS `request` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `Sportsman_ID` int(11) DEFAULT NULL,
+  `Subject` varchar(100) NOT NULL,
+  `Request` varchar(500) DEFAULT NULL,
+  `Date_Time` datetime DEFAULT NULL,
+  `Status` tinyint(1) DEFAULT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=426 ;
+
+--
+-- Dumping data for table `request`
+--
+
+INSERT INTO `request` (`ID`, `Sportsman_ID`, `Subject`, `Request`, `Date_Time`, `Status`) VALUES
+(247, 292, 'World university games', ' \r\n im A national weightlifter,i have to participate worl University games 2011.please give me a sponsorship. \r\n<br/>  Sujan Duminda \r\n<br/>  sujaan.duminda@yahoo.in\r\n<br/>Sport: weightlifting\r\n', NULL, 1),
+(340, 302, 'CDSVVDC', 'Request:  \n VCVSC \n<br/>  Savin Ranasignhe \n<br/>  savini@yahoo.com\n<br/>  Badminton\n<br/>  0718255376\n', NULL, 0),
+(250, 294, 'Saaf games', 'Request:  \r\n i have been selected to saaf games from Batmintain need sponsorship  \r\n<br/>Name:  Nalaka Silva \r\n<br/>Email:  nalaka@yahoo.com\r\n<br/>Sport:  1\r\n<br/>Replay or Confirm : ', NULL, 1),
+(339, 302, 'CDSVVDC', 'Request:  \n VCVSC \n<br/>  Savin Ranasignhe \n<br/>  savini@yahoo.com\n<br/>  Badminton\n<br/>  0718255376\n', NULL, 0),
+(338, 302, 'CDSVVDC', 'Request:  \n VCVSC \n<br/>  Savin Ranasignhe \n<br/>  savini@yahoo.com\n<br/>  Badminton\n<br/>  0718255376\n', NULL, 0),
+(277, 303, 'Tour in India', '  \r\n i need 100 000 rs for tour.. \r\n<br/>  Nimashi deldenia \r\n<br/>  nimashi@yahoo.com\r\n<br/>  Badminton\r\n', NULL, 0),
+(342, 302, 'CDSVVDC', 'Request:  \n VCVSC \n<br/>  Savin Ranasignhe \n<br/>  savini@yahoo.com\n<br/>  Badminton\n<br/>  0718255376\n', NULL, 0),
+(276, 302, 'Reinvoicement', ' \r\n same tournament of national.need sposorship \r\n<br/>  Savin Ranasignhe \r\n<br/>  savini@yahoo.com\r\n<br/>  Badminton\r\n<br/>', NULL, 1),
+(269, 299, 'junior nationals', ' \r\n Need sponsorship for cricket team.we won lemmonade cup last year.. \r\n<br/>  Rukshan Dangalla \r\n<br/>  ruki@gmail.com\r\n<br/>  Cricket\r\n<br/>0776328624', NULL, 1),
+(337, 302, 'CDSVVDC', 'Request:  \n VCVSC \n<br/>  Savin Ranasignhe \n<br/>  savini@yahoo.com\n<br/>  Badminton\n<br/>  0718255376\n', NULL, 0),
+(270, 294, 'Friendship trnament', ' \r\n need 10,000 sponsorship \r\n<br/>  Rukshan Dangalla \r\n<br/>  ruki@gmail.com\r\n<br/>  Cricket\r\n<br/>0723434215 ', NULL, 1),
+(335, 302, 'CDSVVDC', 'Request:  \n VCVSC \n<br/>  Savin Ranasignhe \n<br/>  savini@yahoo.com\n<br/>  Badminton\n<br/>  0718255376\n', NULL, 0),
+(300, 302, 'savini  week point', ' \r\n need 100,000 for tour \r\n<br/>  Savin Ranasinghe\r\n<br/> savini@yahoo.com\r\n<br/>Batmintain\r\n<br/>0718255376', NULL, 1),
+(271, 300, 'olympic games', '\r\n need main sponsorship \r\n<br/>  Ransilu Jayathilake \r\n<br/>  ransilu@yahoo.com\r\n<br/>  Weight Lifting\r\n<br/>0775333310', NULL, 1),
+(272, 301, 'Saaf Games', ' \r\n i have participated saaf games.next year i play for saaf.need sponsorship \r\n<br/>  Sameera perise \r\n<br/>  rkshika@yahoo.com\r\n<br/>  Squash\r\n<br/> 0718232444', NULL, 0),
+(336, 302, 'CDSVVDC', 'Request:  \n VCVSC \n<br/>  Savin Ranasignhe \n<br/>  savini@yahoo.com\n<br/>  Badminton\n<br/>  0718255376\n', NULL, 0),
+(273, 301, 'National', '  \r\n need sponsorship \r\n<br/>  Sameera perise \r\n<br/>  rkshika@yahoo.com\r\n<br/>  Squash\r\n<br/>0718232444  ', NULL, 0),
+(274, 302, 'Batmintain National festival', '\r\n need 5000 sponsorship for wester province \r\n<br/>  Savin Ranasignhe \r\n<br/>  savini@yahoo.com\r\n<br/>  Badminton\r\n<br/> ', NULL, 1),
+(334, 302, 'CDSVVDC', 'Request:  \n VCVSC \n<br/>  Savin Ranasignhe \n<br/>  savini@yahoo.com\n<br/>  Badminton\n<br/>  0718255376\n', NULL, 0),
+(329, 302, 'CDSVVDC', 'Request:  \n VCVSC \n<br/>  Savin Ranasignhe \n<br/>  savini@yahoo.com\n<br/>  Badminton\n<br/>  0718255376\n', NULL, 0),
+(330, 302, 'CDSVVDC', 'Request:  \n VCVSC \n<br/>  Savin Ranasignhe \n<br/>  savini@yahoo.com\n<br/>  Badminton\n<br/>  0718255376\n', NULL, 0),
+(331, 302, 'CDSVVDC', 'Request:  \n VCVSC \n<br/>  Savin Ranasignhe \n<br/>  savini@yahoo.com\n<br/>  Badminton\n<br/>  0718255376\n', NULL, 0),
+(332, 302, 'CDSVVDC', 'Request:  \n VCVSC \n<br/>  Savin Ranasignhe \n<br/>  savini@yahoo.com\n<br/>  Badminton\n<br/>  0718255376\n', NULL, 0),
+(312, 292, 'junior nationals 2011', ' \r\n need sponsorship \r\n<br/>  Sujan Duminda \r\n<br/>  sujaan.duminda@yahoo.in\r\n<br/>  Weight Lifting\r\n<br/>  0718232376\r\n', NULL, 1),
+(297, 305, 'american frienship tournament', '  \r\n need sponsorship \r\n<br/>  sumudu wathsala \r\n<br/>  sumudu@gmail.com\r\n<br/>  Badminton\r\n<br/>0778123212\r\n', NULL, 1),
+(333, 302, 'CDSVVDC', 'Request:  \n VCVSC \n<br/>  Savin Ranasignhe \n<br/>  savini@yahoo.com\n<br/>  Badminton\n<br/>  0718255376\n', NULL, 0),
+(306, 308, 'ro tour', ' \r\n need sponsorship for canada tour \r\n<br/> Roshana tennakon \r\n<br/  ro@yahoo.com\r\n<br/>  Squash\r\n<br/>', NULL, 0),
+(307, 308, 'request for meterial', ' \r\n need 300000 cash for buying sports meterials \r\n<br/>  Roshana tennakon \r\n<br/>  ro@yahoo.com\r\n<br/>  Squash\r\n<br/>', NULL, 0),
+(341, 302, 'CDSVVDC', 'Request:  \n VCVSC \n<br/>  Savin Ranasignhe \n<br/>  savini@yahoo.com\n<br/>  Badminton\n<br/>  0718255376\n', NULL, 0),
+(328, 302, 'DFFD', 'Request:  \n ccd df d dd gfd  \n<br/>  Savin Ranasignhe \n<br/>  savini@yahoo.com\n<br/>  Badminton\n<br/>  0718255376\n', NULL, 0),
+(327, 302, 'DFFD', 'Request:  \n ccd df d dd gfd  \n<br/>  Savin Ranasignhe \n<br/>  savini@yahoo.com\n<br/>  Badminton\n<br/>  0718255376\n', NULL, 0),
+(325, 302, 'Olympic games', '\r\n need 20000000 urgent \r\n<br/>  Savin Ranasignhe \r\n<br/>  savini@yahoo.com\r\n<br/>  Badminton\r\n<br/>  0718255376\r\n', NULL, 1),
+(326, 302, 'DFFD', 'Request:  \n ccd df d dd gfd  \n<br/>  Savin Ranasignhe \n<br/>  savini@yahoo.com\n<br/>  Badminton\n<br/>  0718255376\n', NULL, 0),
+(422, 308, 'match', '   need sponsorship <br/>  Roshana tennakon \n<br/>  ro@yahoo.com\n<br/>  Squash\n<br/>  \n<br/><h5>if you have any problem    </h5>Check out  <br/><i>http://localhost/SportsLK%20website2/profile.php?idsp=308&entersp=member&action2=sportman . \r\n					</i>\r\n		<br/>\r\n	<p>Thank you,</p>\r\n	<p>sportsman;</p>\r\n	<p>www.sportslk.COM</p>', '2011-07-17 16:52:05', 0),
+(322, 310, 'Saaf games 2012', '\r\n please be kind enough to consider my request.im national weightlifter .i have won many national s games . im searching sponsorship .thank you \r\n<br/> Sujan Duminda \r\n<br/>  sujan100@yahoo.com\r\n<br/>  Weight Lifting\r\n<br/> 0718232376  \r\n', NULL, 1),
+(321, 309, 'National festival', '\r\n searching sponsorship for frstival game \r\n<br/>  Roshan Silva \r\n<br/>  roshan@gmail.com\r\n<br/>  Weight Lifting\r\n<br/>  0777234343\r\n', NULL, 1),
+(343, 302, 'CDSVVDC', 'Request:  \n VCVSC \n<br/>  Savin Ranasignhe \n<br/>  savini@yahoo.com\n<br/>  Badminton\n<br/>  0718255376\n', NULL, 0),
+(344, 302, 'CDSVVDC', 'Request:  \n VCVSC \n<br/>  Savin Ranasignhe \n<br/>  savini@yahoo.com\n<br/>  Badminton\n<br/>  0718255376\n', NULL, 0),
+(345, 302, 'CDSVVDC', 'Request:  \n VCVSC \n<br/>  Savin Ranasignhe \n<br/>  savini@yahoo.com\n<br/>  Badminton\n<br/>  0718255376\n', NULL, 0),
+(346, 302, 'CDSVVDC', 'Request:  \n VCVSC \n<br/>  Savin Ranasignhe \n<br/>  savini@yahoo.com\n<br/>  Badminton\n<br/>  0718255376\n', NULL, 0),
+(347, 302, ',MK', 'Request:  \n KKJK \n<br/>  Savin Ranasignhe \n<br/>  savini@yahoo.com\n<br/>  Badminton\n<br/>  0718255376\n', NULL, 0),
+(348, 302, 'FVFDV', 'Request:  \n GBDGBBG \n<br/>  Savin Ranasignhe \n<br/>  savini@yahoo.com\n<br/>  Badminton\n<br/>  0718255376\n', NULL, 0),
+(349, 302, 'FVFDV', 'Request:  \n GBDGBBG \n<br/>  Savin Ranasignhe \n<br/>  savini@yahoo.com\n<br/>  Badminton\n<br/>  0718255376\n', NULL, 0),
+(350, 302, 'FVFDV', 'Request:  \n GBDGBBG \n<br/>  Savin Ranasignhe \n<br/>  savini@yahoo.com\n<br/>  Badminton\n<br/>  0718255376\n', NULL, 0),
+(354, 302, 'mnjk', 'Request:  \n jnjk \n<br/>  Savin Ranasignhe \n<br/>  savini@yahoo.com\n<br/>  Badminton\n<br/>  0718255376\n', '2011-04-29 14:41:41', 0),
+(353, 302, 'fgggbhgbhhg', 'Request:  \n gfbgfbfgbfgbbn \n<br/>  Savin Ranasignhe \n<br/>  savini@yahoo.com\n<br/>  Badminton\n<br/>  0718255376\n', '2011-02-25 17:44:01', 0),
+(355, 302, 'jijkj', 'Request:  \n hhjhij \n<br/>  Savin Ranasignhe \n<br/>  savini@yahoo.com\n<br/>  Badminton\n<br/>  0718255376\n', '2011-04-29 14:50:06', 0),
+(356, 302, 'dddf', 'Request:  \n xdccv \n<br/>  Savin Ranasignhe \n<br/>  savini@yahoo.com\n<br/>  Badminton\n<br/>  0718255376\n', '2011-05-24 17:53:03', 0),
+(357, 311, 'Saaf  ganes', 'Request:  \n i need sponsorship \n<br/>  sujan Duminda \n<br/>  sujan100@yahoo.com\n<br/>  Weight Lifting\n<br/>  \n', '2011-05-25 11:04:02', 1),
+(358, 311, 'nationals', 'Request:  \n need sponsorship \n<br/>  sujan Duminda \n<br/>  sujan100@yahoo.com\n<br/>  Weight Lifting\n<br/>  \n', '2011-05-25 11:04:51', 1),
+(359, 311, 'saaf 2012', 'Request:  \n gjhgjg \n<br/>  sujan Duminda \n<br/>  sujan100@yahoo.com\n<br/>  Weight Lifting\n<br/>  \n', '2011-05-25 11:16:53', 1),
+(360, 302, 'ttt', 'Request:  \n ghg \n<br/>  Savin Ranasignhe \n<br/>  savini@yahoo.com\n<br/>  Badminton\n<br/>  0718255376\n', '2011-05-25 12:12:49', 0),
+(361, 302, 'h', 'Request:  \n ffgt \n<br/>  Savin Ranasignhe \n<br/>  savini@yahoo.com\n<br/>  Badminton\n<br/>  0718255376\n', '2011-05-25 13:10:05', 0),
+(362, 302, 'dd', 'Request:  \n ff \n<br/>  Savin Ranasignhe \n<br/>  savini@yahoo.com\n<br/>  Badminton\n<br/>  0718255376\n', '2011-05-25 13:21:33', 0),
+(363, 302, 'fddsfsd ', 'Request:  \n vbbb \n<br/>  Savin Ranasignhe \n<br/>  savini@yahoo.com\n<br/>  Badminton\n<br/>  0718255376\n', '2011-05-25 13:27:53', 0),
+(364, 302, 'dhgdhgsa', 'Request:  \n njdhfj \n<br/>  Savin Ranasignhe \n<br/>  savini@yahoo.com\n<br/>  Badminton\n<br/>  0718255376\n', '2011-05-25 14:48:10', 0),
+(365, 302, 'gj', 'Request:  \n zgbhwgd \n<br/>  Savin Ranasignhe \n<br/>  savini@yahoo.com\n<br/>  Badminton\n<br/>  0718255376\n', '2011-05-25 14:51:18', 0),
+(366, 302, 'hhtgh', 'Request:  \n tt \n<br/>  Savin Ranasignhe \n<br/>  savini@yahoo.com\n<br/>  Badminton\n<br/>  0718255376\n', '2011-05-25 14:59:23', 0),
+(367, 302, 'hhtgh', 'Request:  \n ghth \n<br/>  Savin Ranasignhe \n<br/>  savini@yahoo.com\n<br/>  Badminton\n<br/>  0718255376\n', '2011-05-25 15:12:27', 0),
+(368, 302, 'dfgdgt', 'Request:  \n ghfh \n<br/>  Savin Ranasignhe \n<br/>  savini@yahoo.com\n<br/>  Badminton\n<br/>  0718255376\n', '2011-05-25 15:23:46', 0),
+(378, 311, 'olympic 2012', 'Request:  \n vhgjbkm \n<br/>  sujan Duminda \n<br/>  sujan100@yahoo.com\n<br/>  Weight Lifting\n<br/>  \n', '2011-05-26 17:11:31', 1),
+(380, 311, 'national2012', '   please give me sponsorship .im national level sportsman  \n  \n<br/>  sujan Duminda \n<br/>  sujan100@yahoo.com\n<br/>  Weight Lifting\n<br/>  \n<br/><p>Check out http://localhost/SportsLK%20website2/profile.php?idsp=311&entersp=member&action2=sportman . </br>\r\n					if you have any problem</p>\r\n		</br>\r\n	<p>Thank you,</p>\r\n	<p>sportsman;</p>\r\n	<p>www.sportslk.COM</p>', '2011-07-15 23:06:55', 1),
+(424, 311, 'nimashis tuornament ', '   i need sponsorship for ..... <br/>  sujan Duminda \n<br/>  sujan100@yahoo.com\n<br/>  Badminton\n<br/>  \n<br/><h5>if you have any problem    </h5>Check out  <br/><i>http://localhost/SportsLK%20website2/profile.php?idsp=311&entersp=member&action2=sportman . \r\n					</i>\r\n		<br/>\r\n	<p>Thank you,</p>\r\n	<p>sportsman;</p>\r\n	<p>www.sportslk.COM</p>', '2011-07-21 21:25:46', 1),
+(425, 311, 'jayanntha memeria cup', '   need spons 39933 <br/>  sujan Duminda \n<br/>  sujan100@yahoo.com\n<br/>  Badminton\n<br/>  \n<br/><h5>if you have any problem    </h5>Check out  <br/><i>http://localhost/SportsLK%20website2/profile.php?idsp=311&entersp=member&action2=sportman . \r\n					</i>\r\n		<br/>\r\n	<p>Thank you,</p>\r\n	<p>sportsman;</p>\r\n	<p>www.sportslk.COM</p>', '2011-07-25 22:33:43', 1),
+(388, 302, 'match university', '   10,000 sonsorship.<p><i>Check out http://localhost/SportsLK%20website2/profile.php?idsp=302&entersp=member&action2=sportman . \r\n					if you have any problem</i></p>  \n  \n<br/>  Savin Ranasignhe \n<br/>  savini@yahoo.com\n<br/>  Badminton\n<br/>  0718255376\n<br/>\r\n		</br>\r\n	<p>Thank you,</p>\r\n	<p>sportsman;</p>\r\n	<p>www.sportslk.COM</p>', '2011-07-16 13:31:02', 0),
+(398, 448, 'dede', '   efefrfrfr.<p><i>Check out http://localhost/SportsLK%20website2/profile.php?idsp=448&entersp=member&action2=sportman . \r\n					if you have any problem</i></p>  \n  \n<br/>  Amila Senanaake \n<br/>  amila@gmail.com\n<br/>  Squash\n<br/>  0778983243\n<br/>\r\n		</br>\r\n	<p>Thank you,</p>\r\n	<p>sportsman;</p>\r\n	<p>www.sportslk.COM</p>', '2011-07-16 14:35:02', 0),
+(423, 311, 'vfdvfvbfb', '   sfdsfdfdf <br/>  sujan Duminda \n<br/>  sujan100@yahoo.com\n<br/>  Badminton\n<br/>  \n<br/><h5>if you have any problem    </h5>Check out  <br/><i>http://localhost/SportsLK%20website2/profile.php?idsp=311&entersp=member&action2=sportman . \r\n					</i>\r\n		<br/>\r\n	<p>Thank you,</p>\r\n	<p>sportsman;</p>\r\n	<p>www.sportslk.COM</p>', '2011-07-19 11:30:05', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `request_respond`
+--
+
+CREATE TABLE IF NOT EXISTS `request_respond` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `Sponsor_ID` int(11) DEFAULT NULL,
+  `Sportsman_ID` int(11) DEFAULT NULL,
+  `Subject` varchar(100) NOT NULL,
+  `Response` varchar(100) DEFAULT NULL,
+  `Rs_Date_TIME` datetime DEFAULT NULL,
+  KEY `ID` (`ID`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=99 ;
+
+--
+-- Dumping data for table `request_respond`
+--
+
+INSERT INTO `request_respond` (`ID`, `Sponsor_ID`, `Sportsman_ID`, `Subject`, `Response`, `Rs_Date_TIME`) VALUES
+(76, 58, 311, 'Sponsorship for commentwelth games weightlifting', 'ok i can consider your request.', NULL),
+(77, 54, 302, 'Olympic games', 'i cant give you.. sorry madame', NULL),
+(74, 78, 309, 'National festival', 'yhjnb jnjkn ', NULL),
+(16, 54, 305, 'american frienship tournament', 'oki ill give you. you can call me 0772188822', NULL),
+(17, 54, 294, 'Saaf games', 'ok ill give u', NULL),
+(80, 54, 294, 'Friendship trnament', 'i ll consider', NULL),
+(78, 78, 300, 'olympic games', 'will try', NULL),
+(73, 60, 309, 'National festival', 'i can consider your request', NULL),
+(58, 54, 302, 'Reinvoicement', 'i cant give you', NULL),
+(75, 58, 310, 'Saaf games 2012', 'ok. i consider your request.', NULL),
+(72, 58, 309, 'National festival', 'i can help you .. please give me a call 0112323454', NULL),
+(71, 60, 292, 'World university games', 'not posible', NULL),
+(79, 54, 302, 'Reinvoicement', 'ok', NULL),
+(81, 54, 302, 'Olympic games', 'i have to call you', NULL),
+(82, 54, 302, 'savini  week point', 'will see in newxt month', NULL),
+(83, 54, 302, 'savini  week point', 'call you', NULL),
+(84, 54, 302, 'Batmintain National festival', 'ok', NULL),
+(85, 54, 294, 'Friendship trnament', 'i can', NULL),
+(86, 54, 302, 'Reinvoicement', 'ok', NULL),
+(87, 54, 302, 'Olympic games', 'i ll do', NULL),
+(88, 54, 294, 'Saaf games', 'we hope to help', NULL),
+(89, 54, 302, 'Olympic games', 'im sorry ', NULL),
+(92, 78, 311, 'Saaf  ganes', 'i will concider ur massage', '2011-05-25 11:05:40'),
+(91, 78, 292, 'junior nationals 2011', 'BBBBBBBBBBBBBBBBBBBBBBBBBBBB GFFFFFFFFFFFF', '2011-02-24 20:09:36'),
+(93, 78, 311, 'nationals', 'we are nt giving local tournaments. sorry ', '2011-05-25 11:06:19'),
+(94, 78, 311, 'saaf 2012', 'hghj', '2011-05-25 11:17:43'),
+(95, 78, 311, 'olympic 2012', 'jhkhklk', '2011-05-26 17:12:27'),
+(96, 78, 292, 'World university games', 'nbnhjbj', '2011-07-15 13:33:33'),
+(97, 78, 311, 'vfdvfvbfb', 'bgnhnmh', '2011-07-19 11:30:46'),
+(98, 78, 311, 'nimashis tuornament', 'i cant sry..', '2011-07-21 21:27:24');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `school`
+--
+
+CREATE TABLE IF NOT EXISTS `school` (
+  `school_ID` int(11) NOT NULL AUTO_INCREMENT,
+  `school_Name` varchar(20) NOT NULL,
+  `principle_Name` varchar(20) NOT NULL,
+  `location` varchar(15) DEFAULT NULL,
+  `adStreet` varchar(100) DEFAULT NULL,
+  `adRegon` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`school_ID`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+--
+-- Dumping data for table `school`
+--
+
+INSERT INTO `school` (`school_ID`, `school_Name`, `principle_Name`, `location`, `adStreet`, `adRegon`) VALUES
+(1, 'Rahula College', 'Mr.Liyanage', 'Matara', 'Akuressa Road', 'Nupee'),
+(2, 'Royal College', 'Mr.Vithanage', 'Colombo', 'aaaaaa', 'bbbbbb'),
+(3, 'Darmaraja Vidyalaya', 'Mr.ddddddd', 'Kandy', 'ddddd', 'eeeee');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `school_sport`
+--
+
+CREATE TABLE IF NOT EXISTS `school_sport` (
+  `school_ID` int(11) NOT NULL DEFAULT '0',
+  `sport_ID` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`school_ID`,`sport_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `school_sport`
+--
+
+INSERT INTO `school_sport` (`school_ID`, `sport_ID`) VALUES
+(1, 1),
+(1, 2),
+(1, 3),
+(2, 1),
+(2, 2),
+(2, 3),
+(3, 1),
+(3, 2),
+(3, 3);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sign_in`
+--
+
+CREATE TABLE IF NOT EXISTS `sign_in` (
+  `Index` int(11) NOT NULL AUTO_INCREMENT,
+  `Type` varchar(50) NOT NULL,
+  `User` varchar(50) NOT NULL,
+  `Password` varchar(30) NOT NULL,
+  `Id` int(11) NOT NULL,
+  PRIMARY KEY (`Index`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=158 ;
+
+--
+-- Dumping data for table `sign_in`
+--
+
+INSERT INTO `sign_in` (`Index`, `Type`, `User`, `Password`, `Id`) VALUES
+(151, 'to', 'Roshan', '111', 1),
+(150, 'sp', 'Sujan100', '222', 311),
+(129, 'sn', 'Athula', 'asas', 78),
+(149, 'sp', 'Sujan100', 'www', 310),
+(148, 'sp', 'Roshan22', 'www', 309),
+(147, 'sp', 'Rox11', '1122', 308),
+(146, 'sp', 'minsara', '1234', 307),
+(123, 'sn', 'ddff', '3', 66),
+(145, 'sp', 'apa11', 'qqq', 306),
+(144, 'sp', 'Sumudu82', 'azaz', 305),
+(143, 'sp', 'ppppppppp', 'n', 304),
+(142, 'sp', 'Nimashi2011', '1122', 303),
+(141, 'sp', 'Savini', '333', 302),
+(140, 'sp', 'Rukshika', '12123', 301),
+(139, 'sp', 'Ransilu', 'www', 300),
+(137, 'sp', 'Rukshan', 'vvv', 299),
+(133, 'sp', 'Nalaka88', 'e', 294),
+(109, 'sp', 'Sujan', 'rajans', 292),
+(138, 'sn', 'DayanSlim', '123123', 80),
+(111, 'sn', 'Brain', '12345', 60),
+(94, 'sn', 'mahinda50', '23', 56),
+(95, 'sn', 'ewaaqq', 'qq', 57),
+(96, 'sn', 'malingarox', 'ds', 58),
+(130, 'sn', 'ddsds', 'd', 79),
+(153, 'sp', 'Amila', '123123', 448),
+(154, 'sp', 'Amila', '123123', 448),
+(155, 'sp', 'Wasala', '321321', 450),
+(156, 'sp', 'Wasala', '321321', 450),
+(157, 'sp', 'Kushan', '111', 452),
+(88, 'sn', 'romae44', 'ddd', 47),
+(92, 'sn', 'mm', 'bb', 54);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sms`
+--
+
+CREATE TABLE IF NOT EXISTS `sms` (
+  `tpno` varchar(15) NOT NULL,
+  `status` tinyint(1) NOT NULL,
+  PRIMARY KEY (`tpno`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `sms`
+--
+
+INSERT INTO `sms` (`tpno`, `status`) VALUES
+('0713558230', 1),
+('0714500653', 1),
+('0718232376', 1),
+('0718585628', 0),
+('0718797836', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `spdate`
+--
+
+CREATE TABLE IF NOT EXISTS `spdate` (
+  `sdid` int(10) NOT NULL,
+  `sdate` date NOT NULL,
+  `tittle` varchar(255) NOT NULL,
+  `edate` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `spdate`
+--
+
+INSERT INTO `spdate` (`sdid`, `sdate`, `tittle`, `edate`) VALUES
+(311, '2011-07-20', 'nationals', '2011-07-28'),
+(292, '2011-07-03', 'province', '2011-07-03'),
+(311, '2011-06-29', 'my meet', '2011-06-29'),
+(311, '2011-07-12', 'tour', '2011-07-12');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sponsor`
+--
+
+CREATE TABLE IF NOT EXISTS `sponsor` (
+  `Sponsor_ID` int(11) NOT NULL AUTO_INCREMENT,
+  `First_Name` varchar(20) NOT NULL,
+  `Middle_Name` varchar(20) DEFAULT NULL,
+  `Last_Name` varchar(20) NOT NULL,
+  `Date_Of_Birth` date NOT NULL,
+  `Gender` varchar(1) DEFAULT NULL,
+  `Nationality` varchar(15) DEFAULT NULL,
+  `Religion` varchar(15) DEFAULT NULL,
+  `Address_No` varchar(10) DEFAULT NULL,
+  `Street` varchar(20) DEFAULT NULL,
+  `Region` varchar(20) DEFAULT NULL,
+  `City` varchar(20) DEFAULT NULL,
+  `Mobile` varchar(10) DEFAULT NULL,
+  `Tel_Home` varchar(10) DEFAULT NULL,
+  `E_Mail` varchar(30) DEFAULT NULL,
+  `Image` blob,
+  `Total` double(15,2) DEFAULT NULL,
+  `Balance` double(15,2) DEFAULT NULL,
+  PRIMARY KEY (`Sponsor_ID`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=82 ;
+
+--
+-- Dumping data for table `sponsor`
+--
+
+INSERT INTO `sponsor` (`Sponsor_ID`, `First_Name`, `Middle_Name`, `Last_Name`, `Date_Of_Birth`, `Gender`, `Nationality`, `Religion`, `Address_No`, `Street`, `Region`, `City`, `Mobile`, `Tel_Home`, `E_Mail`, `Image`, `Total`, `Balance`) VALUES
+(7, 'mike', '', 'jhone', '1955-06-13', 'M', 'american', 'cathollic', '', '', '', '', '', '', 'mike@yahoo.com', NULL, NULL, NULL),
+(58, 'malinga', '', 'silva', '1993-06-15', 'M', '', '', '', '', '', '', '0772345434', '0112323454', 'mksfernando@gmail.com', NULL, NULL, NULL),
+(57, 'ewaa', '', 'wee', '2011-01-03', 'M', '', '', '', '', '', '', '', '', 'vddf@yahoo.com', NULL, NULL, NULL),
+(80, 'Dayan', '', 'Gomaz', '1978-03-12', 'M', 'sri lanka', 'buddhist', '544', 'back street', 'katuvila', 'Dehiwela', '0712234344', '0112456765', 'Dayang@yahoo.com', NULL, NULL, NULL),
+(78, 'Athula', '', 'wijewickrama', '1974-12-16', 'M', 'sri lanka', 'Christian', '125', 'kotugodalla veediya', '', 'kandy', '0773456565', '0812349374', 'asankapathirana1988@gmail.com ', NULL, NULL, NULL),
+(47, 'rumi', '', 'rvvv', '2011-01-03', '', '', '', '', '', '', '', '', '', 'gaya.yt@gmail.com', NULL, NULL, NULL),
+(60, 'Brain', 'steven', 'korkoven', '1978-08-12', 'M', 'sri lanka', 'Christian', '', '', '', '', '', '0112343545', 'fathimasahna@gmail.com', NULL, NULL, NULL),
+(54, 'Mahinda', NULL, 'Gamage', '1976-06-16', 'M', 'Sri Lanka', 'Buddhisum', '23', 'jawaththe road', 'jawaththa', 'colombo 07', '0772321234', '0112323666', 'naufer12@gmail.com', NULL, NULL, NULL),
+(56, 'mahinda', '', 'gamage', '2011-01-03', 'M', '', '', '', '', '', '', '', '', 'gamage@gamail.com', NULL, NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sponsor_sport`
+--
+
+CREATE TABLE IF NOT EXISTS `sponsor_sport` (
+  `Sponsor_ID` int(11) NOT NULL DEFAULT '0',
+  `Sport_ID` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`Sponsor_ID`,`Sport_ID`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `sponsor_sport`
+--
+
+INSERT INTO `sponsor_sport` (`Sponsor_ID`, `Sport_ID`) VALUES
+(0, 0),
+(7, 2),
+(47, 1),
+(54, 1),
+(56, 2),
+(57, 2),
+(58, 4),
+(60, 4),
+(78, 4),
+(80, 3);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sport`
+--
+
+CREATE TABLE IF NOT EXISTS `sport` (
+  `Sport_ID` int(11) NOT NULL AUTO_INCREMENT,
+  `Sport` varchar(30) DEFAULT NULL,
+  `Comment` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`Sport_ID`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+
+--
+-- Dumping data for table `sport`
+--
+
+INSERT INTO `sport` (`Sport_ID`, `Sport`, `Comment`) VALUES
+(1, 'Badminton', 'AAAAAAAAAAAAAAAAAAAAAAAAAA'),
+(2, 'Squash', 'BBBBBBBBBBBBBBBBBBBBBBBBBB'),
+(3, 'Cricket', 'CCCCCCCCCCCCCCCCCCCCCCC'),
+(4, 'Weight Lifting', 'DDDDDDDDDDDDDDDDDDDDDDDDDD');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sportsman`
+--
+
+CREATE TABLE IF NOT EXISTS `sportsman` (
+  `Sportsman_ID` int(11) NOT NULL AUTO_INCREMENT,
+  `First_Name` varchar(20) NOT NULL,
+  `Middle_Name` varchar(20) DEFAULT NULL,
+  `Last_Name` varchar(20) NOT NULL,
+  `Rank` int(5) NOT NULL,
+  `Date_Of_Birth` date NOT NULL,
+  `Status` tinyint(1) DEFAULT NULL,
+  `Gender` varchar(1) DEFAULT NULL,
+  `Nationality` varchar(15) DEFAULT NULL,
+  `Religion` varchar(15) DEFAULT NULL,
+  `Height` int(3) DEFAULT NULL,
+  `Weight` double(5,2) DEFAULT NULL,
+  `Blood_Group` varchar(10) DEFAULT NULL,
+  `Diet` tinyint(1) DEFAULT NULL,
+  `Address_No` varchar(10) DEFAULT NULL,
+  `Street` varchar(20) DEFAULT NULL,
+  `Region` varchar(20) DEFAULT NULL,
+  `City` varchar(20) DEFAULT NULL,
+  `Mobile` varchar(10) DEFAULT NULL,
+  `Tel_Home` varchar(10) DEFAULT NULL,
+  `E_Mail` varchar(30) DEFAULT NULL,
+  `IMG_NAME` varchar(100) NOT NULL,
+  `DELETE` tinyint(1) NOT NULL,
+  PRIMARY KEY (`Sportsman_ID`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=453 ;
+
+--
+-- Dumping data for table `sportsman`
+--
+
+INSERT INTO `sportsman` (`Sportsman_ID`, `First_Name`, `Middle_Name`, `Last_Name`, `Rank`, `Date_Of_Birth`, `Status`, `Gender`, `Nationality`, `Religion`, `Height`, `Weight`, `Blood_Group`, `Diet`, `Address_No`, `Street`, `Region`, `City`, `Mobile`, `Tel_Home`, `E_Mail`, `IMG_NAME`, `DELETE`) VALUES
+(311, 'sujan', '', 'Duminda', 20, '1988-03-07', 0, 'M', 'Sri lanka', 'Buddhist', 186, 76.00, 'O-', 0, '', '', '', '', '', '', 'sujan100@yahoo.com', 'fvfv.jpg', 0),
+(310, 'Sujan', 'De', 'Duminda', 19, '1988-01-20', 0, 'M', '', '', 0, 0.00, '', 0, '', '', '', '', '', '', 'gaya.yt@gmail.com', '', 0),
+(309, 'Roshan', '', 'Silva', 18, '1984-06-20', 0, 'M', '', '', 0, 0.00, '', 0, '', '', '', '', '0777234343', '', 'roshan@gmail.com', '82363653.jpg', 0),
+(308, 'Roshana', '', 'tennakon', 17, '1957-01-19', 0, 'M', '', '', 0, 0.00, '', 0, '', '', '', '', '', '', 'ro@yahoo.com', 'n1479416669_30056197_7573047.jpg', 0),
+(307, 'minsara', '', 'gfdusgfi', 16, '1989-01-17', 0, 'M', '', '', 0, 0.00, '', 0, '', '', '', '', '', '', 'minsara@yahoo.com', '', 0),
+(306, 'chanaka', '', 'Ranasinghe', 15, '1987-05-17', 0, 'M', '', '', 0, 0.00, '', 0, '33', 'torinton place', 'kuruduwaththa', 'colombo 07', '0778123234', '0112349989', 'apa@yahoo.com', 'apa.jpg', 0),
+(305, 'sumudu', '', 'wathsala', 14, '1982-01-26', 1, 'F', 'Sri lanka', 'Buddhist', 180, 65.00, 'AB+', 0, '625', 'temple road', 'Dandagamuwa', 'kuliyapitiya', '0778123212', '037 398330', 'sumudu@gmail.com', 'dsc_6330.jpg', 0),
+(304, 'nnn', '', 'mmm', 13, '1958-01-10', 0, 'M', '', '', 0, 0.00, '', 0, '', '', '', '', '', '', 'xxxxxxu@yahoo.com', '', 0),
+(303, 'Nimashi', '', 'deldenia', 12, '1952-01-09', 0, 'F', 'Sri lanka', 'Buddhist', 0, 0.00, '', 0, '', '', '', '', '', '', 'nimashi@yahoo.com', '', 0),
+(292, 'Sujan', '', 'Duminda', 1, '1988-03-07', 0, 'M', 'Sri lanka', 'Buddhist', 185, 77.00, 'A+', 0, '651', 'temple road', 'Dandagamuwa', 'kuliyapitiya', '0718232376', '0373983301', 'sujan.duminda@yahoo.in', '', 0),
+(294, 'Nalaka', 'de', 'Silva', 3, '1987-05-10', 0, 'M', 'Sri lanka', 'Buddhist', 175, 65.00, 'B+', 1, '32', 'worden road', 'madawala', 'colombo 06', '0723434215', '0112318437', 'nalaka@yahoo.com', '', 0),
+(302, 'Savini', '', 'Ranasignhe', 11, '1988-11-17', 0, 'F', 'Sri lanka', 'Buddhist', 177, 58.00, 'B+', 0, '21', 'temple road', '', 'colombo 08', '0718255376', '0116618437', 'savini@yahoo.com', 'savin.jpg', 0),
+(301, 'Sameera', '', 'perise', 10, '1976-06-08', 0, 'F', 'Sri lanka', 'Buddhist', 176, 55.00, 'B-', 1, '123', 'peradeniya roead', 'madabowala', 'Kandy', '0718232444', '0812343322', 'rkshika@yahoo.com', '', 0),
+(299, 'Rukshan', 'lakshitha', 'Dangalla', 8, '1988-05-13', 0, 'M', 'Sri lanka', 'Buddhist', 160, 55.00, 'A-', 0, '125', 'temple road', 'ruwanwalla', 'Kagalle', '0776328624', '0812345434', 'ruki@gmail.com', '', 0),
+(300, 'Ransilu', '', 'Jayathilake', 9, '1986-06-15', 0, 'M', 'Sri lanka', 'Buddhist', 180, 94.00, 'B+', 0, '211', 'peradeniya road', 'mulgampola', 'Kandy', '0775333310', '0812345455', 'mksfernando@gmail.com', 'national_weight_lifting6.jpg', 0),
+(322, 'spfname322', NULL, 'splname322', 22, '1988-03-07', NULL, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(321, 'spfname321', NULL, 'splname321', 21, '1988-03-07', NULL, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(323, 'spfname323', NULL, 'splname323', 23, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(324, 'spfname324', NULL, 'splname324', 24, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(325, 'spfname325', NULL, 'splname325', 25, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(326, 'spfname326', NULL, 'splname326', 26, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(327, 'spfname327', NULL, 'splname327', 27, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(328, 'spfname328', NULL, 'splname328', 28, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(329, 'spfname329', NULL, 'splname329', 29, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(330, 'spfname330', NULL, 'splname330', 30, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(331, 'spfname331', NULL, 'splname331', 31, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(332, 'spfname332', NULL, 'splname332', 32, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(333, 'spfname333', NULL, 'splname333', 33, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(334, 'spfname334', NULL, 'splname334', 34, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(335, 'spfname335', NULL, 'splname335', 35, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(336, 'spfname336', NULL, 'splname336', 36, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(337, 'spfname337', NULL, 'splname337', 37, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(338, 'spfname338', NULL, 'splname338', 38, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(339, 'spfname339', NULL, 'splname339', 39, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(340, 'spfname340', NULL, 'splname340', 40, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(341, 'spfname341', NULL, 'splname341', 41, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(342, 'spfname342', NULL, 'splname342', 42, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(343, 'spfname343', NULL, 'splname343', 43, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(344, 'spfname344', NULL, 'splname344', 44, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(345, 'spfname345', NULL, 'splname345', 45, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(346, 'spfname346', NULL, 'splname346', 46, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(347, 'spfname347', NULL, 'splname347', 47, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(348, 'spfname348', NULL, 'splname348', 48, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(349, 'spfname349', NULL, 'splname349', 49, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(350, 'spfname350', NULL, 'splname350', 50, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(351, 'spfname351', NULL, 'splname351', 51, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(352, 'spfname352', NULL, 'splname352', 52, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(353, 'spfname353', NULL, 'splname353', 53, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(354, 'spfname354', NULL, 'splname354', 54, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(355, 'spfname355', NULL, 'splname355', 55, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(356, 'spfname356', NULL, 'splname356', 56, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(357, 'spfname357', NULL, 'splname357', 57, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(358, 'spfname358', NULL, 'splname358', 58, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(359, 'spfname359', NULL, 'splname359', 59, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(360, 'spfname360', NULL, 'splname360', 60, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(361, 'spfname361', NULL, 'splname361', 61, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(362, 'spfname362', NULL, 'splname362', 62, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(363, 'spfname363', NULL, 'splname363', 63, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(364, 'spfname364', NULL, 'splname364', 64, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(365, 'spfname365', NULL, 'splname365', 65, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(366, 'spfname366', NULL, 'splname366', 66, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(367, 'spfname367', NULL, 'splname367', 67, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(368, 'spfname368', NULL, 'splname368', 68, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(369, 'spfname369', NULL, 'splname369', 69, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(370, 'spfname370', NULL, 'splname370', 70, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(371, 'spfname371', NULL, 'splname371', 71, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(372, 'spfname372', NULL, 'splname372', 72, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(373, 'spfname373', NULL, 'splname373', 73, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(374, 'spfname374', NULL, 'splname374', 74, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(375, 'spfname375', NULL, 'splname375', 75, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(376, 'spfname376', NULL, 'splname376', 76, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(377, 'spfname377', NULL, 'splname377', 77, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(378, 'spfname378', NULL, 'splname378', 78, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(379, 'spfname379', NULL, 'splname379', 79, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(380, 'spfname380', NULL, 'splname380', 80, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(381, 'spfname381', NULL, 'splname381', 81, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(382, 'spfname382', NULL, 'splname382', 82, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(383, 'spfname383', NULL, 'splname383', 83, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(384, 'spfname384', NULL, 'splname384', 84, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(385, 'spfname385', NULL, 'splname385', 85, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(386, 'spfname386', NULL, 'splname386', 86, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(387, 'spfname387', NULL, 'splname387', 87, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(388, 'spfname388', NULL, 'splname388', 88, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(389, 'spfname389', NULL, 'splname389', 89, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(390, 'spfname390', NULL, 'splname390', 90, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(391, 'spfname391', NULL, 'splname391', 91, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(392, 'spfname392', NULL, 'splname392', 92, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(393, 'spfname393', NULL, 'splname393', 93, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(394, 'spfname394', NULL, 'splname394', 94, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(395, 'spfname395', NULL, 'splname395', 95, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(396, 'spfname396', NULL, 'splname396', 96, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(397, 'spfname397', NULL, 'splname397', 97, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(398, 'spfname398', NULL, 'splname398', 98, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(399, 'spfname399', NULL, 'splname399', 99, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(400, 'spfname400', NULL, 'splname400', 100, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(401, 'spfname401', NULL, 'splname401', 101, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(402, 'spfname402', NULL, 'splname402', 102, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(403, 'spfname403', NULL, 'splname403', 103, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(404, 'spfname404', NULL, 'splname404', 104, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(405, 'spfname405', NULL, 'splname405', 105, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(406, 'spfname406', NULL, 'splname406', 106, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(407, 'spfname407', NULL, 'splname407', 107, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(408, 'spfname408', NULL, 'splname408', 108, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(409, 'spfname409', NULL, 'splname409', 109, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(410, 'spfname410', NULL, 'splname410', 110, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(411, 'spfname411', NULL, 'splname411', 111, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(412, 'spfname412', NULL, 'splname412', 112, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(413, 'spfname413', NULL, 'splname413', 113, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(414, 'spfname414', NULL, 'splname414', 114, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(415, 'spfname415', NULL, 'splname415', 115, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(416, 'spfname416', NULL, 'splname416', 116, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(417, 'spfname417', NULL, 'splname417', 117, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(418, 'spfname418', NULL, 'splname418', 118, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(419, 'spfname419', NULL, 'splname419', 119, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(420, 'spfname420', NULL, 'splname420', 120, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(421, 'spfname421', NULL, 'splname421', 121, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(422, 'spfname422', NULL, 'splname422', 122, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(423, 'spfname423', NULL, 'splname423', 123, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(424, 'spfname424', NULL, 'splname424', 124, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(425, 'spfname425', NULL, 'splname425', 125, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(426, 'spfname426', NULL, 'splname426', 126, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(427, 'spfname427', NULL, 'splname427', 127, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(428, 'spfname428', NULL, 'splname428', 128, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(429, 'spfname429', NULL, 'splname429', 129, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(430, 'spfname430', NULL, 'splname430', 130, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(431, 'spfname431', NULL, 'splname431', 131, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(432, 'spfname432', NULL, 'splname432', 132, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(433, 'spfname433', NULL, 'splname433', 133, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(434, 'spfname434', NULL, 'splname434', 134, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(435, 'spfname435', NULL, 'splname435', 135, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(436, 'spfname436', NULL, 'splname436', 136, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(437, 'spfname437', NULL, 'splname437', 137, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(438, 'spfname438', NULL, 'splname438', 138, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(439, 'spfname439', NULL, 'splname439', 139, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(440, 'spfname440', NULL, 'splname440', 140, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(441, 'spfname441', NULL, 'splname441', 141, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(442, 'spfname442', NULL, 'splname442', 142, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(443, 'spfname443', NULL, 'splname443', 143, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(444, 'spfname444', NULL, 'splname444', 144, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(445, 'spfname445', NULL, 'splname445', 145, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(446, 'spfname446', NULL, 'splname446', 146, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(447, 'spfname447', NULL, 'splname447', 147, '1988-03-07', 0, 'M', 'Srilanka', 'Buddhist', 180, 80.00, 'A', 0, '100', 'temple road', 'katubadda', 'Moratuwa', '718232376', '112323454', 'hardsujan@gmail.com', '', 0),
+(448, 'Amila', '', 'Senanaake', 0, '1987-02-18', 0, 'M', 'srilanka', 'buddisum', 190, 70.00, 'O+', 0, '22', '1st lane', 'mahawa', 'polonnaruwa', '0778983243', '0452345465', 'amila@gmail.com', 'srinat_pp.jpg', 0),
+(451, 'wasala', '', 'silva', 0, '1982-09-19', 1, 'M', 'srilanka', '', 0, 0.00, '', 0, '', '', '', '', '0719232343', '0452345656', 'wasala@yahoo.com', '', 0),
+(452, 'Kushan', '', 'dddd', 0, '1959-07-15', 0, 'M', '', '', 0, 0.00, '', 0, '', '', '', '', '', '', 'sds@gmail.com', 'ccccc.jpg', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sportsman_sport`
+--
+
+CREATE TABLE IF NOT EXISTS `sportsman_sport` (
+  `Sportsman_ID` int(11) NOT NULL DEFAULT '0',
+  `Sport_ID` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`Sportsman_ID`,`Sport_ID`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `sportsman_sport`
+--
+
+INSERT INTO `sportsman_sport` (`Sportsman_ID`, `Sport_ID`) VALUES
+(292, 4),
+(294, 1),
+(295, 1),
+(296, 1),
+(297, 1),
+(298, 1),
+(299, 1),
+(300, 1),
+(300, 4),
+(301, 1),
+(301, 2),
+(302, 1),
+(303, 1),
+(304, 1),
+(305, 1),
+(306, 1),
+(306, 4),
+(307, 1),
+(307, 2),
+(308, 1),
+(308, 2),
+(309, 1),
+(309, 4),
+(310, 1),
+(310, 4),
+(311, 1),
+(311, 4),
+(312, 1),
+(313, 1),
+(314, 1),
+(315, 1),
+(316, 1),
+(317, 1),
+(318, 1),
+(319, 1),
+(320, 1),
+(321, 1),
+(322, 1),
+(323, 1),
+(324, 1),
+(325, 1),
+(326, 1),
+(327, 1),
+(328, 1),
+(329, 1),
+(330, 1),
+(331, 1),
+(332, 1),
+(333, 1),
+(334, 1),
+(335, 1),
+(336, 1),
+(337, 1),
+(338, 1),
+(339, 1),
+(340, 1),
+(341, 1),
+(342, 1),
+(343, 1),
+(344, 1),
+(345, 1),
+(346, 1),
+(347, 1),
+(348, 1),
+(349, 1),
+(350, 1),
+(351, 1),
+(352, 1),
+(353, 1),
+(354, 1),
+(355, 1),
+(356, 1),
+(357, 1),
+(358, 1),
+(359, 1),
+(360, 1),
+(361, 1),
+(362, 1),
+(363, 1),
+(364, 1),
+(365, 1),
+(366, 1),
+(367, 1),
+(368, 1),
+(369, 1),
+(370, 1),
+(371, 1),
+(372, 1),
+(373, 1),
+(374, 1),
+(375, 1),
+(376, 1),
+(377, 1),
+(378, 1),
+(379, 1),
+(380, 1),
+(381, 1),
+(382, 1),
+(383, 1),
+(384, 1),
+(385, 1),
+(386, 1),
+(387, 1),
+(388, 1),
+(389, 1),
+(390, 1),
+(391, 1),
+(392, 1),
+(393, 1),
+(394, 1),
+(395, 1),
+(396, 1),
+(397, 1),
+(398, 1),
+(399, 1),
+(400, 1),
+(401, 1),
+(402, 1),
+(403, 1),
+(404, 1),
+(405, 1),
+(406, 1),
+(407, 1),
+(408, 1),
+(409, 1),
+(410, 1),
+(411, 1),
+(412, 1),
+(413, 1),
+(414, 1),
+(415, 1),
+(416, 1),
+(417, 1),
+(418, 1),
+(419, 1),
+(420, 1),
+(421, 1),
+(422, 1),
+(423, 1),
+(424, 1),
+(425, 1),
+(426, 1),
+(427, 1),
+(428, 1),
+(429, 1),
+(430, 1),
+(431, 1),
+(432, 1),
+(433, 1),
+(434, 1),
+(435, 1),
+(436, 1),
+(437, 1),
+(438, 1),
+(439, 1),
+(440, 1),
+(441, 1),
+(442, 1),
+(443, 1),
+(444, 1),
+(445, 1),
+(446, 1),
+(447, 1),
+(448, 1),
+(448, 2),
+(449, 1),
+(450, 1),
+(451, 1),
+(452, 1),
+(452, 2);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sport_s`
+--
+
+CREATE TABLE IF NOT EXISTS `sport_s` (
+  `Sport_ID` int(11) NOT NULL AUTO_INCREMENT,
+  `Sport` varchar(30) DEFAULT NULL,
+  PRIMARY KEY (`Sport_ID`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+--
+-- Dumping data for table `sport_s`
+--
+
+INSERT INTO `sport_s` (`Sport_ID`, `Sport`) VALUES
+(1, 'Badminton'),
+(2, 'cricket'),
+(3, 'swimming');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `squdate`
+--
+
+CREATE TABLE IF NOT EXISTS `squdate` (
+  `sdate` date NOT NULL,
+  `tittle` varchar(255) NOT NULL,
+  `edate` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `squdate`
+--
+
+INSERT INTO `squdate` (`sdate`, `tittle`, `edate`) VALUES
+('2011-06-28', 'kjeks', '2011-06-28'),
+('2011-07-08', 'vfgfgfhg', '2011-07-08'),
+('2011-06-29', 'hsjhdjsa', '2011-06-29'),
+('2011-06-27', 'nnnn', '2011-06-27'),
+('2011-06-26', 'hnhj', '2011-06-26');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_img`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_img` (
+  `IMG_ID` int(11) NOT NULL AUTO_INCREMENT,
+  `IMG_NAME` varchar(100) NOT NULL DEFAULT 'No Image',
+  `Sportsman_ID` int(11) NOT NULL,
+  PRIMARY KEY (`IMG_ID`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=19 ;
+
+--
+-- Dumping data for table `tbl_img`
+--
+
+INSERT INTO `tbl_img` (`IMG_ID`, `IMG_NAME`, `Sportsman_ID`) VALUES
+(1, '6040_141288752428_504032428_3287566_6414974_n.jpg', 302),
+(4, 'fvfv.jpg', 311),
+(5, '6040_141288752428_504032428_3287566_6414974_n.jpg', 302),
+(13, 'fvfv.jpg', 311),
+(14, 'images.jpg', 309),
+(11, 'SAM_0284.jpg', 450),
+(12, 'ccccc.jpg', 452),
+(9, 'fvfv.jpg', 311),
+(10, 'srinat_pp.jpg', 448),
+(15, 'n1479416669_30056197_7573047.jpg', 308),
+(16, 'apa.jpg', 306),
+(17, 'national_weight_lifting6.jpg', 300),
+(18, 'national_weight_lifting6.jpg', 300);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tournament_organizer`
+--
+
+CREATE TABLE IF NOT EXISTS `tournament_organizer` (
+  `to_id` int(11) NOT NULL AUTO_INCREMENT,
+  `First_Name` varchar(20) NOT NULL,
+  `Middle_Name` varchar(20) NOT NULL,
+  `Last_Name` varchar(20) NOT NULL,
+  `Gender` varchar(1) NOT NULL,
+  `Address_No` int(11) NOT NULL,
+  `Street` varchar(15) NOT NULL,
+  `Region` varchar(15) NOT NULL,
+  `City` varchar(20) NOT NULL,
+  `Mobile` int(11) NOT NULL,
+  `Tel_Home` int(11) NOT NULL,
+  `E_Mail` varchar(30) NOT NULL,
+  PRIMARY KEY (`to_id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `tournament_organizer`
+--
+
+INSERT INTO `tournament_organizer` (`to_id`, `First_Name`, `Middle_Name`, `Last_Name`, `Gender`, `Address_No`, `Street`, `Region`, `City`, `Mobile`, `Tel_Home`, `E_Mail`) VALUES
+(1, 'Roshan', 'de', 'Silva', '', 11, 'temple road', 'katubadda', 'moratuwa', 778898234, 112343454, 'roshan@gmail.com');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `youtube_ip`
+--
+
+CREATE TABLE IF NOT EXISTS `youtube_ip` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `userip` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
+
+--
+-- Dumping data for table `youtube_ip`
+--
+
+INSERT INTO `youtube_ip` (`id`, `userip`) VALUES
+(4, '128.36.5.8'),
+(5, '234.67.89.0');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `youtube_rating`
+--
+
+CREATE TABLE IF NOT EXISTS `youtube_rating` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `liked` int(11) NOT NULL,
+  `dislike` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+--
+-- Dumping data for table `youtube_rating`
+--
+
+INSERT INTO `youtube_rating` (`id`, `liked`, `dislike`) VALUES
+(1, 0, 0),
+(2, 17, 5),
+(3, 86, 25);

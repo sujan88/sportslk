@@ -1,0 +1,90 @@
+
+
+
+/* Buttons */
+#editor-xtd-buttons {
+	padding: 5px;
+}
+
+.button2-left,
+.button2-right,
+.button2-left div,
+.button2-right div {
+	float: left;
+}
+
+.button2-left a,
+.button2-right a,
+.button2-left span,
+.button2-right span {
+	display: block;
+	height: 22px;
+	float: left;
+	line-height: 22px;
+	font-size: 11px;
+	color:#CF6;
+	cursor: pointer;
+}
+
+.button2-left span,
+.button2-right span {
+	cursor: default;
+	color:#9C0;
+}
+
+.button2-left .page a,
+.button2-right .page a,
+.button2-left .page span,
+.button2-right .page span {
+	padding: 0 6px;
+}
+
+.page span {
+	color: #000;
+	font-weight: bold;
+}
+
+.button2-left a:hover,
+.button2-right a:hover {
+	text-decoration: none;
+	color:#CF3;
+}
+
+.button2-left a,
+.button2-left span {
+	padding: 0 240px 0 6px;
+}
+
+.button2-right a,
+.button2-right span {
+	padding: 0 6px 0 24px;
+}
+
+.button2-left {
+	background: url(../images/j_button2_left.png) no-repeat;
+	float: left;
+	margin-left: 5px;
+}
+
+.button2-right {
+	background: url(../images/j_button2_right.png) 100% 0 no-repeat;
+	float: left;
+	margin-left: 5px;
+}
+
+.button2-left .image {
+	background: url(../images/j_button2_image.png) 100% 0 no-repeat;
+}
+
+.button2-left .readmore {
+	background: url(../images/j_button2_readmore.png) 100% 0 no-repeat;
+}
+
+.button2-left .pagebreak {
+	background: url(../images/j_button2_pagebreak.png) 100% 0 no-repeat;
+}
+
+.button2-left .blank {
+	background: url(../images/j_button2_blank.png) 100% 0 no-repeat;
+}
+

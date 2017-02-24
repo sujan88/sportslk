@@ -1,0 +1,58 @@
+
+(paste this in Css.css)
+
+.tab_content_naf {
+	padding-left:20px;
+	padding-right:20px;
+	font-size: 14px;
+	height:auto;
+	margin-bottom:20px;
+	
+}
+
+
+
+(paste this in index.css)
+
+.search {
+
+	width:890px; 
+	height:45px;
+	margin:auto;	
+}
+
+
+
+
+
+  <?php 
+	@ $sport=$_GET['shop'];
+	
+	switch($sport) {
+		
+		case 'cricket':
+	
+	?>                 
+                     
+                     
+                     
+                     <!--asdfggggggggggggggggggggh-->
+                     
+                     
+                     
+<?php 
+                     
+               break;      
+                  
+				  case 'badminton': 
+				  
+				  
+				  
+				  
+				  break;  
+                     
+                     
+                     
+                     
+                     
+                     } ?>

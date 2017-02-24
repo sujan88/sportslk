@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flashnews>
+	<news>
+		<title><![CDATA[Creare un sito Flash Multilingua con AS2 e AS3]]></title>
+		<description><![CDATA[Oggi vedremo come realizzare e progettare un sito Flash Multilingua utilizzando ActionScript 2 e ActionScript 3
+Molti clienti mi richiedono la possibilità di tradurre il proprio sito Flash in più lingue, questo comporta maggiore visibilità in campo internazionale.]]></description>
+		<url>http://www.juliusdesign.net/creare-un-sito-flash-multilingua-con-as2-e-as3/</url>
+		<image>test1.jpg</image>
+	</news>
+	<news>
+		<title><![CDATA[Ottenere Filmati Flash sempre aggiornati da modifiche]]></title>
+		<description><![CDATA[Oggi parliamo di un argomento molto discusso in ambito Flash, ovvero come ottenere filmati Flash sempre aggiornati da modifiche.
+Una delle cose che i clienti richiedono e quello di fare modifiche e che queste devono essere subito visualizzabili]]></description>
+		<url>http://www.juliusdesign.net/ottenere-filmati-flash-sempre-aggiornati-da-modifiche/</url>
+		<image>test2.jpg</image>
+	</news>
+	<news>
+		<title><![CDATA[Galleria immagini flash: Slide Gallery XML]]></title>
+		<description><![CDATA[Ecco una nuova galleria di immagini in flash implementata dal sottoscritto, l’ho chiamata Slide Gallery XML in quanto le immagini vengono visualizzate con un effetto lightbox in orizzontale come delle slide.]]></description>
+		<url>http://www.juliusdesign.net/galleria-immagini-flash-slide-gallery-xml/</url>
+		<image>test3.jpg</image>
+	</news>
+	<news>
+		<title><![CDATA[iPodPlayer in Flash]]></title>
+		<description><![CDATA[Ecco la nuova versione del progetto iPodPlayer Riproduttore Mp3
+L’update più accattivante della nuova versione è la visualizzazione delle cover cd dei brani musicali, aggiornamento richiesto dalla maggior parte dei visitatori.]]></description>
+		<url>http://www.juliusdesign.net/ipodplayer-in-flash-nuova-versione/</url>
+		<image>test4.jpg</image>
+	</news>
+</flashnews>

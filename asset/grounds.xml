@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<grounds xml:lang="EN">
+   <ground>
+    <seat>s01</seat>
+    <firstName>Public Stadium </firstName>
+    <lastName>Anuradhaoura</lastName>
+	<Type>With Track</Type>
+	<Contact>0324433234</Contact>
+   </ground>
+   <ground>
+    <seat>s02</seat>
+    <firstName>Welagedara Stadium</firstName>
+    <lastName>Kurunagala</lastName>
+	<Type>Non Track</Type>
+	<Contact>0372343454</Contact>
+   </ground>
+   <ground>
+    <seat>s03</seat>
+    <firstName>Bogambara Stadium</firstName>
+    <lastName>Kandy</lastName>
+	<Type>With Track</Type>
+	<Contact>0812324345</Contact>
+   </ground>
+  <ground>
+    <seat>s04</seat>
+    <firstName>Sugathadasa</firstName>
+    <lastName>Cololmbo</lastName>
+	<Type>With Track</Type>
+	<Contact>0112324345</Contact>
+   </ground>
+   <ground>
+    <seat>s05</seat>
+    <firstName>R Premadasa Stadium</firstName>
+    <lastName>Cololmbo</lastName>
+	<Type>Cricket ground</Type>
+	<Contact>0112326665</Contact>
+   </ground>
+   <ground>
+    <seat>s06</seat>
+    <firstName>Diyagama</firstName>
+    <lastName>Cololmbo</lastName>
+	<Type>International ground</Type>
+	<Contact>0112326633</Contact>
+   </ground>
+</grounds>
